@@ -43,4 +43,12 @@ This repository provides a clean Python implementation of the proposed APSMC met
 
 ---
 
+## 📌 Highlights of the PCSSI Paper
+
+- ✅ Establishes a theoretical equivalence between SSI-Cov and SSI-Data through a unified framework.
+- 🔍 Utilizes **Principal Component Analysis** to enhance noise robustness.
+- ⚙️ Achieves **lower computational cost** and **greater numerical stability**, especially under noisy and short-duration data.
+- 📊 Outperforms traditional SSI methods in **5000 Monte Carlo simulations** and **scaled experimental bridge tests**.
+
+
 
