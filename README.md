@@ -8,42 +8,39 @@
 
 ---
 
-## 📄 Paper Summary
+## 📄 Paper Abstract
 
-This paper introduces the **Adaptive Physics-Informed System Modeling with Control (APSMC)** framework, which integrates stochastic subspace theory, Kalman-based optimal estimation, and physics-constrained proximal gradient optimization. APSMC formulates nonlinear dynamics into time-varying state-space models, allowing real-time system identification from sparse and noisy measurements.
-
-The framework is validated across:
-- A **Duffing oscillator** under periodic forcing
-- A **multi-degree-of-freedom frame** subjected to seismic excitation
-- A **scaled bridge model** tested experimentally
-
-It achieves low error (minimum NMSE of 0.398%) in predicting long-horizon responses from short initial segments, making it suitable for digital twin modeling, structural health monitoring, and real-time control.
+Accurately capturing the nonlinear dynamic behavior of structures remains a significant challenge in mechanics and engineering. Traditional physics-based models 
+and data-driven approaches often struggle to simultaneously ensure model interpretability, noise robustness, and estimation optimality. To address this issue, this 
+paper proposes an Adaptive Physics-Informed System Modeling with Control (APSMC) framework. By integrating Kalman filter-based state estimation with physics-constrained 
+proximal gradient optimization, the framework adaptively updates time-varying state-space model parameters while processing real-time input–output data under white noise 
+disturbances. Theoretically, this process is equivalent to real-time tracking of the Jacobian matrix of a nonlinear dynamical system.
+Within this framework, we leverage the theoretical foundation of stochastic subspace identification to demonstrate that, as observational data accumulates, the 
+APSMC algorithm yields state-space model estimates that converge to the theoretically optimal solution. The effectiveness of the proposed framework is validated 
+through numerical simulations of a Duffing oscillator and the seismic response of a frame structure, as well as experimental tests on a scaled bridge model. 
+Experimental results show that, under noisy conditions, APSMC successfully predicts 19 consecutive 10-second time series using only a single initial 10-second 
+segment for model updating, achieving a minimum normalized mean square error (NMSE) of 0.398\%. These findings demonstrate that the APSMC framework not only 
+offers superior online identification and denoising performance but also provides a reliable foundation for downstream applications such as structural health 
+monitoring, real-time control, adaptive filtering, and system identification.
 
 ---
 
 ## 📁 Repository Overview
 
-<p align="center">
-  <img src="04ed28aa-7e34-4bf3-a471-442589daf6ce.png" alt="APSMC Framework Overview" width="650"/>
-</p>
+This repository provides a clean Python implementation of the proposed APSMC method for both Duffing oscillators and frame structures under seismic excitation. All code and data directly support the results presented in the accompanying preprint.
 
 ### 📂 File Descriptions
 
 | File Name            | Description |
 |----------------------|-------------|
-| `APSMC_Duffing.py`   | APSMC implementation for Duffing oscillator under harmonic load |
-| `Duffing_system.py`  | Defines nonlinear Duffing dynamics and simulation setup |
-| `APSMC_seismic.py`   | APSMC implementation for seismic response estimation |
+| `APSMC_Duffing.py`   | APSMC implementation for Duffing oscillator under harmonic excitation |
+| `Duffing_system.py`  | Defines the nonlinear Duffing dynamics and simulation setup |
+| `APSMC_seismic.py`   | APSMC implementation for seismic response estimation of frame structures |
 | `absAccel.xlsx`      | Simulated absolute acceleration response of the frame structure |
-| `ground_motion.xlsx` | Northridge ground motion excitation data (used in seismic test) |
-| `load_data.npy`      | External load input (e.g., forcing function in seismic case) |
-| `state_data.npy`     | Ground truth state trajectories for validation |
+| `ground_motion.xlsx` | Ground motion excitation data used in the seismic case |
+| `load_data.npy`      | External load input (e.g., forcing function for the Duffing system) |
+| `state_data.npy`     | Structural state data from the Duffing system used for validation |
 
 ---
 
-## ▶️ How to Run
 
-1. **Ensure Python 3.8+** is installed with required packages.
-2. To reproduce Duffing oscillator results, run:
-   ```bash
-   python APSMC_Duffing.py
