@@ -7,6 +7,11 @@
 🔗 GitHub Author Page: [https://github.com/Chen861368](https://github.com/Chen861368)
 
 ---
+<p align="center">
+  <img src="APSMC.png" alt="APSMC Method Flowchart" width="650"/>
+</p>
+
+
 
 ## 📄 Paper Abstract
 
