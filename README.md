@@ -116,3 +116,8 @@ The figure below presents the full APSMC application pipeline. Beginning with no
   <img src="SSI.png" alt="APSMC Practical Workflow" width="850"/>
 </p>
 
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
