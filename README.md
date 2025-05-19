@@ -66,5 +66,7 @@ This repository provides a clean Python implementation of the proposed APSMC met
 * ⚙️ Offers a **computationally efficient** and **physically interpretable** solution for structural system identification under uncertainty.
 
 
-
+<p align="center">
+  <img src="SSI.png" alt="SSI" width="650"/>
+</p>
 
