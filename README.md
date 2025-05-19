@@ -8,7 +8,7 @@
 
 ---
 <p align="center">
-  <img src="APSMC.png" alt="APSMC Method Flowchart" width="650"/>
+  <img src="APSMC.png" alt="APSMC Method Flowchart" width="850"/>
 </p>
 
 
@@ -39,7 +39,7 @@ monitoring, real-time control, adaptive filtering, and system identification.
 This repository provides a clean Python implementation of the proposed APSMC method for both Duffing oscillators and frame structures under seismic excitation. All code and data directly support the results presented in the accompanying preprint.
 
 <p align="center">
-  <img src="APSM.png" alt="APSM Method Flowchart" width="650"/>
+  <img src="APSM.png" alt="APSM Method Flowchart" width="850"/>
 </p>
 
 
@@ -72,6 +72,6 @@ This repository provides a clean Python implementation of the proposed APSMC met
 
 
 <p align="center">
-  <img src="SSI.png" alt="SSI" width="650"/>
+  <img src="SSI.png" alt="SSI" width="850"/>
 </p>
 
