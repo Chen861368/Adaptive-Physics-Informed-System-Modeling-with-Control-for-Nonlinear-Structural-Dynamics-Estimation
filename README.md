@@ -43,21 +43,38 @@ monitoring, real-time control, adaptive filtering, and system identification.
 
 ## 📁 Repository Overview
 
-This repository provides a clean Python implementation of the proposed APSMC method for both Duffing oscillators and frame structures under seismic excitation. All code and data directly support the results presented in the accompanying preprint.
+This repository provides a clean Python implementation of the proposed APSMC method for numerical simulation cases, including both Duffing oscillators and frame structures under seismic excitation.
+
+The primary files in this repository are listed below. Each `.py` file organizes its content through well-structured function definitions and includes appropriate inline comments to guide usage and modification.
 
 ### 📂 File Descriptions
 
 | File Name            | Description |
 |----------------------|-------------|
-| `APSMC_Duffing.py`   | APSMC implementation for Duffing oscillator under harmonic excitation |
+| `APSMC_Duffing.py`   | APSMC implementation for the Duffing oscillator under harmonic excitation |
 | `Duffing_system.py`  | Defines the nonlinear Duffing dynamics and simulation setup |
 | `APSMC_seismic.py`   | APSMC implementation for seismic response estimation of frame structures |
 | `absAccel.xlsx`      | Simulated absolute acceleration response of the frame structure |
-| `ground_motion.xlsx` | Ground motion excitation data used in the seismic case |
-| `load_data.npy`      | External load input (e.g., forcing function for the Duffing system) |
-| `state_data.npy`     | Structural state data from the Duffing system used for validation |
+| `ground_motion.xlsx` | Ground motion excitation data used in the seismic test |
+| `load_data.npy`      | External load input (e.g., harmonic forcing function for the Duffing system) |
+| `state_data.npy`     | Structural state data from the Duffing system for validation |
 
 ---
+
+### ⚠️ Important Note on File Paths
+
+Please make sure to update the file read/write paths in the code according to your local environment.  
+In the current version, some hard-coded absolute paths remain from the original development setup.
+
+For example, in the main function of `APSMC_seismic.py`, the following lines specify the default data paths.  
+You should change these to match the actual paths where your data is stored:
+
+```python
+accl_load_path = r'D:\博士课题\小论文\基于APSM方法的最优估计\代码\数据\完整数据\RSN968_NORTHR_DWN360.AT2\absAccel.xlsx'
+relaDisp_load_path = r'D:\博士课题\小论文\基于APSM方法的最优估计\代码\数据\完整数据\RSN968_NORTHR_DWN360.AT2\relaDisp.xlsx'
+relaVel_load_path = r'D:\博士课题\小论文\基于APSM方法的最优估计\代码\数据\完整数据\RSN968_NORTHR_DWN360.AT2\relaVel.xlsx'
+input_load_path = r'D:\博士课题\小论文\基于APSM方法的最优估计\代码\数据\完整数据\RSN968_NORTHR_DWN360.AT2\ground_motion.xlsx'
+```
 
 ## 📌 Highlights of the APSMC Paper
 
