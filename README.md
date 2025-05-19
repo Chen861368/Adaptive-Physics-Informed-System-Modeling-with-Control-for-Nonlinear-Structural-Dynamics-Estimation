@@ -43,12 +43,18 @@ This repository provides a clean Python implementation of the proposed APSMC met
 
 ---
 
-## 📌 Highlights of the PCSSI Paper
+## 📌 Highlights of the APSMC Paper
 
-- ✅ Establishes a theoretical equivalence between SSI-Cov and SSI-Data through a unified framework.
-- 🔍 Utilizes **Principal Component Analysis** to enhance noise robustness.
-- ⚙️ Achieves **lower computational cost** and **greater numerical stability**, especially under noisy and short-duration data.
-- 📊 Outperforms traditional SSI methods in **5000 Monte Carlo simulations** and **scaled experimental bridge tests**.
+* 🧠 Proposes **Adaptive Physics-Informed System Modeling with Control (APSMC)**, a digital twin framework that fuses physics-based modeling with data-driven learning via real-time filtering and proximal gradient optimization.
+
+* 🔁 Reformulates **nonlinear dynamics into time-varying state-space models**, enabling online updates of system matrices from sparse and noisy data.
+
+* 📐 Theoretically proves that APSMC achieves **convergence to a physically consistent optimal solution** under the stochastic subspace identification framework with embedded Kalman filtering.
+
+* 🧪 Demonstrates robust performance in diverse scenarios: **Duffing oscillator simulations**, **seismic response of frame structures**, and **laboratory-scaled bridge experiments**.
+
+* ⚙️ Offers a **computationally efficient** and **physically interpretable** solution for structural system identification under uncertainty.
+
 
 
 
